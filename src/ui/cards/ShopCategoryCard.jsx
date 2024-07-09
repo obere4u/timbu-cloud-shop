@@ -1,25 +1,39 @@
+import { cn } from "@/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function ShopCategoryCard({ name, owner, price, label, image }) {
+export default function ShopCategoryCard({
+  name,
+  owner,
+  price,
+  label,
+  image,
+  link,
+}) {
+  const className = cn(
+    "rounded-md p-4 w-full md:w-[386px] border border-black"
+  );
+  console.log(className);
+
   return (
     <Link
-      href={"#"}
-      className="rounded-md p-4 w-full md:w-[386px] border border-secondary-mediumGrey"
+      href={link}
+      className={className}
     >
-      <div className="w-full rounded-md">
+      <div className="w-full rounded-md overflow-hidden">
         <Image
           src={image}
           width={336}
           height={244}
           alt={`${name} image`}
+          className="object-cover w-full h-full"
         />
       </div>
 
       <div className="flex items-center justify-between mt-4">
         <div>
-          <h3 className="text-lg bg-red-900 font-semibold">{name}</h3>
+          <h3 className="text-lg font-semibold">{name}</h3>
           <span className="text-secondary-mediumGrey">{owner}</span>
         </div>
         <Image

@@ -1,4 +1,4 @@
-import ShopCategoryCard from "@/ui/cards/shopCategoryCard";
+import ShopCategoryCard from "@/ui/cards/ShopCategoryCard";
 import { lato, montserrat } from "@/ui/fonts";
 import { cn } from "@/utils/cn";
 import React from "react";
@@ -49,6 +49,7 @@ export default function CategoryShop() {
           </div>
         ))}
       </div>
+
       {/*item cards */}
       <div className="p-8 grid gap-8 grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 ">
         {shopCategoryData.map((item, index) => (
@@ -59,6 +60,7 @@ export default function CategoryShop() {
             price={item.price}
             label={item.label}
             image={item.image}
+            link="#"
           />
         ))}
       </div>

@@ -4,10 +4,14 @@ import { cn } from "@/utils/cn";
 import React from "react";
 import { shopCategoryData } from "./shopCategoryData";
 
-
 export default function CategoryShop() {
-
-  const categories = ["men's fashion", "women's fashion", "kid's wear", "home appliances", "discount deals"]
+  const categories = [
+    "men's fashion",
+    "women's fashion",
+    "kid's wear",
+    "home appliances",
+    "discount deals",
+  ];
 
   return (
     <div className="py-12">
@@ -46,7 +50,18 @@ export default function CategoryShop() {
         ))}
       </div>
       {/*item cards */}
-      <ShopCategoryCard items={shopCategoryData} />
+      <div className="p-8 grid gap-8 grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 ">
+        {shopCategoryData.map((item, index) => (
+          <ShopCategoryCard
+            key={item + index}
+            name={item.name}
+            owner={item.owner}
+            price={item.price}
+            label={item.label}
+            image={item.image}
+          />
+        ))}
+      </div>
     </div>
   );
 }

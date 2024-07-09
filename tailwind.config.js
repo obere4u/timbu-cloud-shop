@@ -7,10 +7,28 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: {
+          brightTeal: "#E1E6EF",
+          richBlack: "#2D2D2D",
+          lightCyan: "#00C6D7",
+        },
+        secondary: {
+          lightGrey: "#F5F5F5",
+          mediumGrey: "#B0B0B0",
+        },
+        accent: {
+          softYellow: "#FFEB3B",
+          softRed: "#FF5722",
+        },
+        text: {
+          primary: "#2C3E50",
+          secondary: "#1D2433CC",
+          disabled: "#1D2433A6",
+        },
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        heroBg: "url('/hero-bg-image.jpg')",
       },
     },
   },

@@ -3,6 +3,8 @@ import { lato, montserrat } from "@/ui/fonts";
 import { cn } from "@/utils/cn";
 import React from "react";
 import { shopCategoryData } from "./shopCategoryData";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function CategoryShop() {
   const categories = [
@@ -51,18 +53,77 @@ export default function CategoryShop() {
       </div>
 
       {/*item cards */}
-      <div className="p-8 grid gap-8 grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 ">
+      <div className="p-8 w-full grid gap-8 grid-cols-1 md:grid-cols-3 2xl:grid-cols-4">
         {shopCategoryData.map((item, index) => (
-          <ShopCategoryCard
+          <Link
+            href={"#"}
             key={item + index}
-            name={item.name}
-            owner={item.owner}
-            price={item.price}
-            label={item.label}
-            image={item.image}
-            link="#"
-          />
+            className={
+              "rounded-md py-4 shadow-md  w-full md:w-[386px] h-[438px] flex  "
+            }
+          >
+            <div className="flex flex-col space-y-4 mx-auto">
+              <div className="rounded-md overflow-hidden">
+                <Image
+                  src={item.image}
+                  width={336}
+                  height={244}
+                  alt={`${item.name} image`}
+                />
+              </div>
+              <div className="flex items-center justify-between mt-4">
+                <div>
+                  <h3
+                    className={cn(
+                      montserrat.className,
+                      "text-[1.25rem] font-[500] capitalize"
+                    )}
+                  >
+                    {item.name}
+                  </h3>
+                  <span className="text-secondary-mediumGrey capitalize">
+                    {item.owner}
+                  </span>
+                </div>
+                <Image
+                  src="/ratings.svg"
+                  width={95}
+                  height={19}
+                  alt="rating"
+                />
+              </div>
+              <p
+                className={cn(
+                  lato.className,
+                  "capitalize text-[0.8rem] text-secondary-mediumGrey mt-2"
+                )}
+              >
+                (4.1k) Customer Reviews
+              </p>
+              <div className="flex items-center justify-between mt-2">
+                <p
+                  className={cn(
+                    montserrat.className,
+                    "font-[700] text-[1.5rem] text-[#484848]"
+                  )}
+                >
+                  ${item.price}
+                </p>
+                <p className={cn(lato.className, "text-red-500 capitalize")}>
+                  {item.label}
+                </p>
+              </div>
+            </div>
+          </Link>
         ))}
+      </div>
+      <div className="flex justify-center mt-6">
+        <Link
+          href={"#"}
+          className="capitalize text-[24px] px-10 py-4 text-primary-richBlack bg-primary-lightCyan rounded-md hover:bg-opacity-80 transition duration-150 ease-in-out"
+        >
+          View more
+        </Link>
       </div>
     </div>
   );

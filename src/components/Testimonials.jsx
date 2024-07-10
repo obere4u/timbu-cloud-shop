@@ -60,7 +60,7 @@ export default function Testimonials() {
             <div className="flex flex-col space-y-4">
               <p>
                 I've been shopping at Ore-online store for over a year now, and
-                I couldn't be happier with the experience.{" "}
+                I couldn't be happier with the experience.
               </p>
               <Image
                 src={"ratings.svg"}

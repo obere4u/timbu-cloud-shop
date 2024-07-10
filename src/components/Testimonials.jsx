@@ -41,6 +41,7 @@ export default function Testimonials() {
               src={"/testi1.png"}
               width={147.01}
               height={146.45}
+              alt="small card"
             />
           </div>
 
@@ -54,6 +55,7 @@ export default function Testimonials() {
               src={"/testiBig.png"}
               width={180.92}
               height={180.92}
+              alt="big card"
             />
             <div className="flex flex-col space-y-4">
               <p>
@@ -64,6 +66,7 @@ export default function Testimonials() {
                 src={"ratings.svg"}
                 width={71.2}
                 height={14.2}
+                alt="yellow star rating"
               />
               <hr className="bg-primary-richBlack mb-4 w-[171.95px] h-[0.75px]" />
               <p
@@ -95,6 +98,7 @@ export default function Testimonials() {
               src={"/testi1.png"}
               width={147.01}
               height={146.45}
+              alt="small card"
             />
             <div className="flex flex-col space-y-4">
               <p
@@ -111,6 +115,7 @@ export default function Testimonials() {
                 src={"ratings.svg"}
                 width={53.27}
                 height={10.65}
+                alt="yellow star rating"
               />
               <hr className="bg-primary-richBlack mb-4 w-[171.95px] h-[0.75px]" />
               <p

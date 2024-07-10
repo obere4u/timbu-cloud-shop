@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Support from "@/components/Support";
 import CategoryShop from "@/components/shopCategory/CategoryShop";
 import TheSale from "@/components/TheSale";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Support />
       <CategoryShop />
       <TheSale />
+      <Testimonials />
     </ClientLayout>
   );
 }

@@ -30,6 +30,9 @@ module.exports = {
       backgroundImage: {
         heroBg: "url('/hero-bg-image.jpg')",
       },
+      rotate: {
+        5: "5deg",
+      },
     },
   },
   plugins: [],

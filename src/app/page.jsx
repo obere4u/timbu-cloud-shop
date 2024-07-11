@@ -5,6 +5,7 @@ import Support from "@/components/Support";
 import CategoryShop from "@/components/shopCategory/CategoryShop";
 import TheSale from "@/components/TheSale";
 import Testimonials from "@/components/Testimonials";
+import DownloadApp from "@/components/DownloadApp";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CategoryShop />
       <TheSale />
       <Testimonials />
+      <DownloadApp />
     </ClientLayout>
   );
 }

@@ -11,6 +11,12 @@ module.exports = {
         custom: "0px 11.21px 33.64px 0px rgba(46, 33, 61, 0.08)",
       },
       colors: {
+        cyanOpacity: "rgba(0, 198, 215, 0.4)",
+        cyanOpacity: "rgba(0, 198, 215, 0.3)",
+        softGray: "#89807A",
+        redOpacity: "rgba(239, 68, 68, 0.2)",
+        yellowOpacity: "rgba(255, 235, 59, 0.4)",
+        darkOpacity: "rgba(45, 45, 45, 0.4)",
         primary: {
           brightTeal: "#E1E6EF",
           richBlack: "#2D2D2D",
@@ -32,6 +38,7 @@ module.exports = {
       },
       backgroundImage: {
         heroBg: "url('/hero-bg-image.jpg')",
+        mobileBg: "url('/mobileApp.png')",
       },
       rotate: {
         5: "5deg",

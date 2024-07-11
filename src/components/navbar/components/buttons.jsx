@@ -75,9 +75,9 @@ export default function NavButtons({ header }) {
           hidden: pathname === "/",
         })}
       >
-        {cartItems.map((item) => (
+        {cartItems.map((item, index) => (
           <Link
-            key={item}
+            key={index}
             href={"#"}
             className={cn("relative w-[18px] h-[18px] text-text-primary", {
               "text-secondary-lightGrey": header,

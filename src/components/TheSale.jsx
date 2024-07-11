@@ -12,6 +12,7 @@ export default function TheSale() {
           src={"/yellow.png"}
           width={555}
           height={633}
+          alt="yellow background"
         />
 
         <div className="bg-[#D5B802] flex flex-col space-y-12 w-full h-full">
@@ -65,6 +66,7 @@ export default function TheSale() {
             src="/star1.svg"
             width={60}
             height={60}
+            alt="stars"
           />
         </div>
         <div className="absolute top-[503px] left-[525px]">
@@ -72,6 +74,7 @@ export default function TheSale() {
             src="/star2.svg"
             width={60}
             height={60}
+            alt="stars"
           />
         </div>
         {/*Stars end*/}

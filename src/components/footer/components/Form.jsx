@@ -52,7 +52,7 @@ export default function Form() {
           type="submit"
           className={cn(
             lato.className,
-            "mt-4 capitalize font-[500] text-[1.5rem] text-center leading-[24px] text-secondary-lightGrey bg-primary-richBlack w-full rounded-[8px] hover:bg-accent-softYellow hover:text-primary-richBlack p-3"
+            "mt-4 capitalize font-[500] text-[1.5rem] text-center leading-[24px] text-secondary-lightGrey bg-primary-richBlack w-full rounded-[8px] hover:bg-accent-softYellow transition-colors duration-150 ease-in-out hover:text-primary-richBlack p-3"
           )}
         >
           Subscribe

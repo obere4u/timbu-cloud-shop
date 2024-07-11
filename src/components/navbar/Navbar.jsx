@@ -9,7 +9,7 @@ export default function Navbar() {
   const [header, setHeader] = useState(false);
 
   const scrollHeader = () => {
-    if (window.scrollY >= 70) {
+    if (window.scrollY >= 32) {
       setHeader(true);
     } else {
       setHeader(false);

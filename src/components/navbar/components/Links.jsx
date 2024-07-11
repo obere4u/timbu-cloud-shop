@@ -49,13 +49,13 @@ export default function Links({ header }) {
           <div
             key={index}
             className={cn(
-              "w-fit capitalize text-[1.3rem] text-secondary-mediumGrey hover:text-text-primary hover:scale-[1.03] border-b border-secondary-lightGrey hover:border-text-primary leading-[24px] transition duration-150 ease-in-out",
+              "w-fit capitalize text-[1.3rem] text-secondary-mediumGrey hover:text-text-primary hover:scale-[1.03]  hover:border-text-primary leading-[24px] transition duration-150 ease-in-out",
               {
-                "text-secondary-mediumGrey border-primary-richBlack hover:border-b hover:border-secondary-lightGrey hover:text-secondary-lightGrey":
+                "text-secondary-mediumGrey border-b border-primary-richBlack hover:border-b hover:border-secondary-lightGrey hover:text-secondary-lightGrey":
                   header,
-                "text-secondary-lightGrey border-secondary-lightGrey scale-[1.03]":
+                "text-secondary-lightGrey border-b border-secondary-lightGrey scale-[1.03]":
                   pathname === link.path && header,
-                "text-text-primary scale-[1.03] border-text-primary":
+                "text-text-primary scale-[1.03] border-b border-text-primary":
                   pathname === link.path && !header,
               }
             )}

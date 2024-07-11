@@ -27,17 +27,14 @@ export default function NavButtons({ header }) {
   ];
 
   return (
-    <div className="w-fit flex space-x-4">
+    <div className="w-[35%] flex space-x-4">
       {/*Login and others */}
-      <div className="flex space-x-6 items-center">
+      <div className="w-full flex space-x-2 items-center">
         <Link href={"/cart"}>
           <div
-            className={cn(
-              "relative flex hover:scale-[1.03] w-full ml-auto items-center space-x-6",
-              {
-                hidden: pathname !== "/",
-              }
-            )}
+            className={cn("relative flex hover:scale-[1.03] w-full", {
+              hidden: pathname !== "/",
+            })}
           >
             <span className=" absolute z-10 -top-[8px] -right-2 rounded-full h-[16px] w-[16px] bg-accent-softRed text-center text-[0.75rem] text-secondary-lightGrey">
               9
@@ -49,24 +46,25 @@ export default function NavButtons({ header }) {
             />
           </div>
         </Link>
-
-        {navBtns.map((navBtn, index) => (
-          <Link
-            key={index}
-            href={navBtn.path}
-            className={cn(
-              "w-fit capitalize text-primary-lightCyan text-[1.3rem] text-center hover:text-opacity-70 transition duration-150 ease-in-out",
-              {
-                "text-text-primary scale-[1.02]": pathname === navBtn.path,
-                hidden: pathname !== "/",
-                "text-text-secondary scale-[1.02] bg-primary-lightCyan px-8 py-2 rounded-md hover:bg-opacity-80 transition duration-150 ease-in-out":
-                  navBtn.path === "/login",
-              }
-            )}
-          >
-            {navBtn.title}
-          </Link>
-        ))}
+        <div className="flex w-full justify-between items-center">
+          {navBtns.map((navBtn, index) => (
+            <Link
+              key={index}
+              href={navBtn.path}
+              className={cn(
+                "w-full capitalize text-primary-lightCyan text-[1.3rem] text-center hover:text-opacity-70 transition duration-150 ease-in-out",
+                {
+                  hidden: pathname !== "/",
+                  "text-text-primary scale-[1.02]": pathname === navBtn.path,
+                  "text-text-secondary scale-[1.02] bg-primary-lightCyan px-8 py-2 rounded-md hover:bg-opacity-80 transition duration-150 ease-in-out":
+                    navBtn.path === "/login",
+                }
+              )}
+            >
+              {navBtn.title}
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/*Cart and others */}

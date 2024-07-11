@@ -21,9 +21,9 @@ export default function NavButtons({ header }) {
   const pathname = usePathname();
 
   const cartItems = [
-    <HiOutlineMagnifyingGlass />,
-    <FaRegUser />,
-    <FaRegStar />,
+    { icon: <HiOutlineMagnifyingGlass />, key: "search" },
+    { icon: <FaRegUser />, key: "user" },
+    { icon: <FaRegStar />, key: "favorites" },
   ];
 
   return (
@@ -55,11 +55,11 @@ export default function NavButtons({ header }) {
             key={index}
             href={navBtn.path}
             className={cn(
-              "w-fit capitalize text-primary-lightCyan text-[1.3rem] text-center  hover:text-opacity-70 transition duration-150 ease-in-out",
+              "w-fit capitalize text-primary-lightCyan text-[1.3rem] text-center hover:text-opacity-70 transition duration-150 ease-in-out",
               {
-                " text-text-primary scale-[1.02]": pathname === navBtn.path,
+                "text-text-primary scale-[1.02]": pathname === navBtn.path,
                 hidden: pathname !== "/",
-                " text-text-secondary scale-[1.02] bg-primary-lightCyan px-8 py-2 rounded-md hover:bg-opacity-80 transition duration-150 ease-in-out":
+                "text-text-secondary scale-[1.02] bg-primary-lightCyan px-8 py-2 rounded-md hover:bg-opacity-80 transition duration-150 ease-in-out":
                   navBtn.path === "/login",
               }
             )}
@@ -75,15 +75,15 @@ export default function NavButtons({ header }) {
           hidden: pathname === "/",
         })}
       >
-        {cartItems.map((item, index) => (
+        {cartItems.map((item) => (
           <Link
-            key={index}
+            key={item.key}
             href={"#"}
             className={cn("relative w-[18px] h-[18px] text-text-primary", {
               "text-secondary-lightGrey": header,
             })}
           >
-            {item}
+            {item.icon}
           </Link>
         ))}
         <Link href={"/cart"}>

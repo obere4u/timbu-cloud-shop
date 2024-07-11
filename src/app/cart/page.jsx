@@ -5,6 +5,7 @@ import { lato, montserrat, volkhov } from "@/ui/fonts";
 import { cartDetails } from "./cartDetails";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import { HiOutlineMinusSm } from "react-icons/hi";
+import Image from "next/image";
 
 export default function Cart() {
   const tableHeaders = ["product image", "name", "size", "selector", "total"];
@@ -42,7 +43,7 @@ export default function Cart() {
                 <React.Fragment key={index}>
                   <tr>
                     <td className="px-4 py-4 text-left capitalize border-b border-t">
-                      <img
+                      <Image
                         src={item.image}
                         width={168}
                         height={225}
@@ -114,11 +115,12 @@ export default function Cart() {
                 </React.Fragment>
               ))}
             </tbody>
-            <tfoot className="w-[50%]">
+            <tfoot>
               <tr>
+                <td colSpan="3"></td>
                 <td
-                  colSpan="4"
-                  className="px-4 border border-black py-2 text-left capitalize border-t"
+                  colSpan="2"
+                  className="px-4 border border-black py-2 text-left capitalize border-t w-[50%]"
                 >
                   {/* You can calculate the total here if needed */}
                 </td>

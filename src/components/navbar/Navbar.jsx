@@ -50,7 +50,7 @@ export default function Navbar() {
       <Links header={header} />
 
       {/* Buttons */}
-      <NavButtons />
+      <NavButtons header={header} />
     </nav>
   );
 }

@@ -42,14 +42,14 @@ export default function Links({ header }) {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex-1">
+    <div className="w-full flex-grow">
       {/* Desktop menu */}
-      <div className="w-full hidden sm:flex sm:w-[50%] sm:mx-auto sm:space-x-10">
+      <div className="w-full hidden sm:flex items-center justify-center sm:space-x-10">
         {links.map((link, index) => (
           <div
             key={index}
             className={cn(
-              "w-fit capitalize text-[1.3rem] text-secondary-mediumGrey hover:text-text-primary scale-[1.03] border-b border-secondary-lightGrey hover:border-text-primary leading-[24px] hover:scale-[1.03] transition duration-150 ease-in-out",
+              "w-fit capitalize text-[1.3rem] text-secondary-mediumGrey hover:text-text-primary hover:scale-[1.03] border-b border-secondary-lightGrey hover:border-text-primary leading-[24px] transition duration-150 ease-in-out",
               {
                 "text-secondary-mediumGrey border-primary-richBlack hover:border-b hover:border-secondary-lightGrey hover:text-secondary-lightGrey":
                   header,

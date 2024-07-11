@@ -5,7 +5,7 @@ import Footer from "@/components/footer/Footer";
 
 export default function ClientLayout({ children }) {
   return (
-    <div className="max-w-[1440px] flex flex-col h-screen">
+    <div className="relative max-w-[1444px] flex flex-col mx-auto h-screen">
       <Navbar />
       <div>{children}</div>
       <Footer />

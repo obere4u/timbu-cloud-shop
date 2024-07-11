@@ -37,7 +37,7 @@ const navBtns = [
   },
 ];
 
-export default function Links() {
+export default function Links({ header }) {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const pathname = usePathname();
 
@@ -49,10 +49,14 @@ export default function Links() {
           <div
             key={index}
             className={cn(
-              "w-fit capitalize text-[1.3rem] leading-[24px] text-secondary-mediumGrey hover:text-text-primary hover:scale-[1.03] transition duration-150 ease-in-out",
+              "w-fit capitalize text-[1.3rem] text-secondary-mediumGrey hover:text-text-primary scale-[1.03] border-b border-secondary-lightGrey hover:border-text-primary leading-[24px] hover:scale-[1.03] transition duration-150 ease-in-out",
               {
-                "text-text-primary scale-[1.03] border-b border-text-primary":
-                  pathname === link.path,
+                "text-secondary-mediumGrey border-primary-richBlack hover:border-b hover:border-secondary-lightGrey hover:text-secondary-lightGrey":
+                  header,
+                "text-secondary-lightGrey border-secondary-lightGrey scale-[1.03]":
+                  pathname === link.path && header,
+                "text-text-primary scale-[1.03] border-text-primary":
+                  pathname === link.path && !header,
               }
             )}
           >

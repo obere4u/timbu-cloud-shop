@@ -53,7 +53,7 @@ export default function CategoryShop() {
       </div>
 
       {/*item cards */}
-      <div className="p-8 w-full grid gap-8 grid-cols-1 md:grid-cols-3 2xl:grid-cols-4">
+      <div className="p-8 w-full grid gap-8 grid-cols-1 md:grid-cols-3 ">
         {shopCategoryData.map((item, index) => (
           <Link
             href={"#"}

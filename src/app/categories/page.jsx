@@ -3,6 +3,8 @@ import ClientLayout from '../clientLayout'
 
 export default function Categories() {
   return (
-    <ClientLayout>sfdfhgj</ClientLayout>
-  )
+    <ClientLayout>
+      <div className=" px-8 pt-[8rem] ">HSop</div>
+    </ClientLayout>
+  );
 }

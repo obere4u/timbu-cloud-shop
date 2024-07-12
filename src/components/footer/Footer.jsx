@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="w-full bg-primary-richBlack md:bg-accent-softRed mt-auto ">
       <div className={cn("w-full mx-auto max-w-[1444px] px-8 pb-8 pt-20")}>
-        <div className="md:flex mb-16">
-          <div className="flex justify-between w-full">
+        <div className="md:flex  mb-16">
+          <div className="md:w-[50%] flex justify-between w-full">
             <div>
               <h3
                 className={cn(
@@ -22,7 +22,7 @@ export default function Footer() {
               <div
                 className={cn(
                   lato.className,
-                  "text-[0.7rem] md:text-[0.825rem] leading-[20.37px] font-[600] flex flex-col space-y-2 mt-4 !text-secondary-lightGrey !md:text-text-primary"
+                  "text-[0.7rem] md:text-[0.825rem] leading-[20.37px] font-[600] flex flex-col space-y-2 mt-4 text-secondary-lightGrey md:text-text-primary"
                 )}
               >
                 <p>+234(0)9025076961</p>
@@ -40,7 +40,7 @@ export default function Footer() {
               )}
             >
               <h3 className="uppercase">customers</h3>
-              <div className="flex flex-col space-y-2 mt-4 !text-secondary-lightGrey md:text-text-primary">
+              <div className="flex flex-col space-y-2 mt-4 text-secondary-lightGrey md:text-text-primary">
                 {customerLinks.map((customerLink, index) => (
                   <p
                     key={customerLink + index}
@@ -69,7 +69,7 @@ export default function Footer() {
                     key={companyLink + index}
                     className={cn(
                       lato.className,
-                      "text-[0.7rem] md:text-[0.825rem] leading-[20.37px] !text-secondary-lightGrey !md:text-text-primary font-[600]"
+                      "text-[0.7rem] md:text-[0.825rem] leading-[20.37px] text-secondary-lightGrey md:text-text-primary font-[600]"
                     )}
                   >
                     {companyLink}

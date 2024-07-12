@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Form() {
   return (
-    <form className="w-full  md:max-w-[45%] md:ml-auto">
+    <form className="w-full md:w-[60%] md:ml-auto">
       <h3
         className={cn(
           montserrat.className,

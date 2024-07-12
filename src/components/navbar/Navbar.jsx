@@ -24,33 +24,32 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={cn(
-        "fixed max-w-[1444px] w-full z-10 p-8 flex items-center justify-between transition duration-300",
-        {
-          "bg-secondary-lightGrey": !header,
-          "bg-primary-richBlack": header,
-        }
-      )}
+    <div
+      className={cn("fixed w-full z-10 p-8 ", {
+        "bg-secondary-lightGrey": !header,
+        "bg-primary-richBlack": header,
+      })}
     >
-      {/* Logo */}
-      <Link
-        href="/"
-        className={cn("text-primary-obereGrey")}
-      >
-        <Image
-          src="/logo.png"
-          width={61.05}
-          height={20}
-          alt="Timbu cloud store logo"
-        />
-      </Link>
+      <nav className="relative mx-auto w-full max-w-[1444px] flex items-center justify-between">
+        {/* Logo */}
+        <Link
+          href="/"
+          className={cn("text-primary-obereGrey")}
+        >
+          <Image
+            src="/logo.png"
+            width={61.05}
+            height={20}
+            alt="Timbu cloud store logo"
+          />
+        </Link>
 
-      {/* Links */}
-      <Links header={header} />
+        {/* Links */}
+        <Links header={header} />
 
-      {/* Buttons */}
-      <NavButtons header={header} />
-    </nav>
+        {/* Buttons */}
+        <NavButtons header={header} />
+      </nav>
+    </div>
   );
 }

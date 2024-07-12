@@ -27,9 +27,9 @@ export default function NavButtons({ header }) {
   ];
 
   return (
-    <div className="w-[35%] flex space-x-4">
+    <div className="hidden md:w-[35%] md:flex space-x-4">
       {/*Login and others */}
-      <div className="w-full flex space-x-2 items-center">
+      <div className="w-full md:flex space-x-2 items-center">
         <Link href={"/cart"}>
           <div
             className={cn("relative flex hover:scale-[1.03] w-full", {

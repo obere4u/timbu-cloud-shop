@@ -12,7 +12,7 @@ export default function Testimonials() {
         <h3
           className={cn(
             montserrat.className,
-            "capitalize font-bold text-[2.875rem] leading-[56.07px] text-[#484848]"
+            "capitalize font-bold text-[1.3rem] md:text-[2.875rem] leading-[56.07px] text-[#484848]"
           )}
         >
           Customers Testimonials
@@ -20,7 +20,7 @@ export default function Testimonials() {
         <p
           className={cn(
             lato.className,
-            "capitalize mt-1 text-[20px] leading-[19.44px] font-normal text-[#8A8A8A]"
+            "capitalize mt-1 text-[0.85rem] md:text-[1.25rem] leading-[19.44px] font-normal text-[#8A8A8A]"
           )}
         >
           Hear What Our Happy Customers Have to Say
@@ -28,13 +28,16 @@ export default function Testimonials() {
       </div>
 
       {/*card */}
-      <div className="w-[85%] mx-auto">
+      <div className="md:w-[85%] mx-auto">
         <div
-          className={cn("relative flex items-center justify-between w-full ")}
+          className={cn(
+            "md:relative md:flex items-center justify-between w-full "
+          )}
         >
+          {/*small*/}
           <div
             className={cn(
-              "rounded-[7.48px] flex items-center pl-8 bg-white w-[482.96px] h-[223.59px]  shadow-custom"
+              "hidden rounded-[7.48px] md:flex items-center pl-8 bg-white w-[482.96px] h-[223.59px]  shadow-custom"
             )}
           >
             <Image
@@ -48,7 +51,7 @@ export default function Testimonials() {
           {/*Big Card */}
           <div
             className={cn(
-              "absolute left-[20.8%] right-0 rounded-[7.48px] -mt-5 flex items-center space-x-10 pl-8 bg-white w-[645.94px] h-[299.05px] shadow-custom"
+              "md:absolute left-[20.8%] right-0 rounded-[7.48px] md:-mt-5 md:flex items-center md:space-x-10 md:pl-8 bg-white w-full mb-10 md:mb-0 md:w-[645.94px] md:h-[299.05px] shadow-custom text-center md:text-left"
             )}
           >
             <Image
@@ -56,8 +59,9 @@ export default function Testimonials() {
               width={180.92}
               height={180.92}
               alt="big card"
+              className="mx-auto"
             />
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col items-center md:items-start md:justify-normal space-y-4 w-full">
               <p>
                 {
                   "I've been shopping at Ore-online store for over a year now, and I couldn't be happier with the experience."
@@ -93,7 +97,7 @@ export default function Testimonials() {
           {/*small */}
           <div
             className={cn(
-              "shadow-[#2E213D] rounded-[7.48px] flex items-center space-x-10 pl-8 bg-white w-[484.46px] h-[224.29px] shadow-custom"
+              "shadow-[#2E213D] rounded-[7.48px] md:flex items-center md:space-x-10 md:pl-8 text-center md:text-left bg-white md:w-[484.46px] md:h-[224.29px] justify-center md:items-start md:justify-normal shadow-custom"
             )}
           >
             <Image
@@ -101,6 +105,7 @@ export default function Testimonials() {
               width={147.01}
               height={146.45}
               alt="small card"
+              className="mx-auto"
             />
             <div className="flex flex-col space-y-4">
               <p
@@ -118,6 +123,7 @@ export default function Testimonials() {
                 width={53.27}
                 height={10.65}
                 alt="yellow star rating"
+                className="mx-auto"
               />
               <hr className="bg-primary-richBlack mb-4 w-[171.95px] h-[0.75px]" />
               <p

@@ -16,12 +16,12 @@ export default function CategoryShop() {
   ];
 
   return (
-    <div className="py-12">
-      <div className="w-[43%] text-center mx-auto">
+    <div className="py-12 px-8 w-full ">
+      <div className="lg:w-[43%] text-center mx-auto">
         <h2
           className={cn(
             montserrat.className,
-            "font-[700] uppercase text-[2.875rem] leading-[56.07px] text-[#484848]"
+            "font-[700] uppercase text-[1.3rem] md:text-[2.875rem] leading-[56.07px] text-[#484848]"
           )}
         >
           Shop by category
@@ -39,12 +39,12 @@ export default function CategoryShop() {
       </div>
 
       {/*Categories */}
-      <div className="p-8 mt-6 flex items-center justify-between">
+      <div className=" mt-6 grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4">
         {categories.map((category, index) => (
           <div
             key={category + index}
             className={cn(
-              "px-10 py-2 bg-secondary-lightGrey rounded-md shadow-md shadow-secondary-lightGrey hover:shadow-lg hover:shadow-text-secondary hover:bg-text-secondary hover:text-secondary-lightGrey cursor-pointer"
+              "text-[0.75rem] md:text-base px-10 py-2 bg-secondary-lightGrey rounded-md shadow-md shadow-secondary-lightGrey hover:shadow-lg hover:shadow-text-secondary hover:bg-text-secondary hover:text-secondary-lightGrey cursor-pointer text-center grid items-center"
             )}
           >
             {category}
@@ -53,13 +53,13 @@ export default function CategoryShop() {
       </div>
 
       {/*item cards */}
-      <div className="p-8 w-full grid gap-8 grid-cols-1 md:grid-cols-3 ">
+      <div className="w-full grid gap-8 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] ">
         {shopCategoryData.map((item, index) => (
           <Link
             href={"#"}
             key={item + index}
             className={
-              "rounded-md py-4 shadow-md  w-full md:w-[386px] h-[438px] flex  "
+              "rounded-md py-4 shadow-md w-full md:w-[386px] h-[438px] flex "
             }
           >
             <div className="flex flex-col space-y-4 mx-auto">

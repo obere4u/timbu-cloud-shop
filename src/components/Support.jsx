@@ -28,13 +28,13 @@ export default function Support() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-around bg-secondary-lightGrey h-[251px]">
+    <div className="px-8 py-10 gap-5 grid grid-cols-[repeat(auto-fit,minmax(6em,1fr))]  bg-secondary-lightGrey ">
       {supportDatas.map((supportData, index) => (
         <div
           key={`${supportData.title}-${index}`}
-          className="flex items-center space-x-4 "
+          className="w-full flex items-center space-x-4 "
         >
-          <div className="flex-shrink-0">
+          <div className="w-fit">
             <Image
               src={supportData.icon}
               width={51}
@@ -46,12 +46,14 @@ export default function Support() {
             <p
               className={cn(
                 montserrat.className,
-                "text-[20px] font-500 leading-[24.38px] font-semibold text-primary-richBlack"
+                "text-[0.75rem] md:text-[1.25rem] font-500 leading-[24.38px] font-semibold text-primary-richBlack"
               )}
             >
               {supportData.title}
             </p>
-            <span className="text-[#4A505C">{supportData.description}</span>
+            <span className="text-[0.5rem] md:text-base text-[#4A505C">
+              {supportData.description}
+            </span>
           </div>
         </div>
       ))}

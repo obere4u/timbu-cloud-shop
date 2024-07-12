@@ -3,10 +3,10 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <header className="relative flex flex-col h-screen bg-heroBg bg-cover p-8 bg-top bg-no-repeat">
+    <header className="relative flex flex-col h-screen bg-heroBg bg-cover p-8 bg-top bg-no-repeat w-full">
       <div className="absolute inset-0 bg-black opacity-50" />
-      <div className="mt-auto relative flex flex-col w-[50%]">
-        <h3 className="text-white text-[1.5rem]">
+      <div className="mt-auto relative flex flex-col md:w-[50%]">
+        <h3 className="text-white text-[1.2rem] md:text-[1.5rem]">
           Discover the best products at unbeatable prices.
         </h3>
         <Link

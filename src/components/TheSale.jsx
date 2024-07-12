@@ -6,21 +6,25 @@ import React from "react";
 
 export default function TheSale() {
   return (
-    <div className="bg-secondary-lightGrey mb-12 h-[633px]">
-      <div className="relative flex mt-12 w-full h-full">
+    <div className="bg-secondary-lightGrey mb-12  md:h-[633px]">
+      <div className="relative md:flex mt-12 w-full h-full">
         <Image
           src={"/yellow.png"}
           width={555}
           height={633}
           alt="yellow background"
+          className="hidden md:block"
         />
 
-        <div className="bg-[#D5B802] flex flex-col space-y-12 w-full h-full">
+        <div className="bg-[#D5B802] p-8 pb-20 md:pb-0 md:p-0 flex flex-col space-y-12 w-full h-full">
           <div
-            className={cn(montserrat.className, "w-[45%] mt-20 ml-[300px] ")}
+            className={cn(
+              montserrat.className,
+              "lg:w-[45%] mt-20 md:ml-[300px] "
+            )}
           >
-            <div className="uppercase text-[4rem] font-[800] text-text-secondary">
-              <div className="w-[75%] bg-secondary-lightGrey py-2 pl-2 pr-1 transform -rotate-5 ">
+            <div className=" uppercase text-[3.5rem] md:text-[4rem] font-[800] text-text-secondary">
+              <div className="w-[60%] lg:w-[75%] bg-secondary-lightGrey py-2 pl-2 pr-1 transform -rotate-5 ">
                 shop
               </div>
               <div className="uppercase ">The Sale</div>
@@ -61,7 +65,7 @@ export default function TheSale() {
           </div>
         </div>
         {/*Stars start */}
-        <div className="absolute top-[211px] left-[662px]">
+        <div className="hidden md:block absolute top-[211px] left-[662px]">
           <Image
             src="/star1.svg"
             width={60}
@@ -69,7 +73,7 @@ export default function TheSale() {
             alt="stars"
           />
         </div>
-        <div className="absolute top-[503px] left-[525px]">
+        <div className="hidden md:block absolute top-[503px] left-[525px]">
           <Image
             src="/star2.svg"
             width={60}

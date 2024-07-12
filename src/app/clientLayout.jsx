@@ -5,9 +5,9 @@ import Footer from "@/components/footer/Footer";
 
 export default function ClientLayout({ children }) {
   return (
-    <div className="relative max-w-[1444px] flex flex-col mx-auto h-screen">
+    <div className="relative w-full flex flex-col mx-auto h-screen">
       <Navbar />
-      <div>{children}</div>
+      <div className="w-full max-w-[1444px] mx-auto">{children}</div>
       <Footer />
     </div>
   );
